@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="leftOp" placeholder="Left Member">
+
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+
+        <input type="text" id="rightOp" placeholder="Right Member">
+
+        <input type="button" value="Try me!" id="calculateBtn">
+    </div>
+    
+    <script>
+        function isPositiveInteger(str) {
+            const reg = /^\d+$/; 
+            return reg.test(str);
+        }
+
+        const btn = document.getElementById('calculateBtn');
+        const leftInput = document.getElementById('leftOp');
+        const rightInput = document.getElementById('rightOp');
+        const operatorSelect = document.getElementById('operator');
+
+        btn.addEventListener('click', function(){
+            const leftVal = leftInput.value.trim();
+            const rightVal = rightInput.value.trim();
+            const op = operatorSelect.value; 
+
+            if (!isPositiveInteger(leftVal) || !isPositiveInteger(rightVal)) {
+                console.log("Error :( -> Input ไม่ใช่ตัวเลขจำนวนเต็มบวก"); 
+                alert("Error :(");
+                return;
+            }
+
+            const l = parseInt(leftVal);
+            const r = parseInt(rightVal);
+            let result;
+
+            if ((op === '/' || op === '%') && r === 0) {
+                const msg = "It's over 9000!";
+                console.log(msg);
+                alert(msg);
+                return;
+            }
+
+            switch (op){
+                case '+': result = l + r; break;
+                case '-': result = l - r; break;
+                case '*': result = l * r; break;
+                case '/': result = l / r; break;
+                case '%': result = l % r; break;
+            }
+
+            console.log("Result: " + result);
+            alert("Result: " + result);
+        });
+
+        setInterval(function() {
+            alert("Please, use me..."); 
+        }, 30000);
+    </script>
+</body>
+</html>

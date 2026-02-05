@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="./src/output_3.css">
+</head>
+<body class="bg-#C5B5B6 text-parchment">
+    <!-- nav-bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-base/95 backdrop-blur-md border-b border-accent/20">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl tracking-tighter text-tan">PORTFOLIO</span>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#about" class="hover:text-tan transition-colors">About</a>
+                <a href="#showcase" class="hover:text-tan transition-colors">Showcase</a>
+                <a href="#contact" class="hover:text-tan transition-colors">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-parchment focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-base border-b border-accent/20 flex flex-col items-center py-6 space-y-4 text-sm font-medium uppercase tracking-widest">
+            <a href="#about" class="mobile-link hover:text-tan">About</a>
+            <a href="#showcase" class="mobile-link hover:text-tan">Showcase</a>
+            <a href="#contact" class="mobile-link hover:text-tan">Contact</a>
+        </div>
+    </nav>
+    <!-- Phone Nav Bar script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        // Toggle Menu
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+    <section id="about" class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="w-64 h-64 overflow-hidden border-2 border-accent shrink-0 shadow-2xl rounded-full">
+                <img src="./src/ac12acbd769ce752325164684a162975.webp" alt="Your Name" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h1 class="text-3xl font-bold mb-1">Hi, My name is Kanonrat Berkkhunthod</h1>
+                <h1 class="text-2xl font-bold mb-4 text-accent">Or you can call me Minnova</h1>
+                <p class="text-lg text-parchment/80 leading-relaxed">
+                    I am a Junior Artist from Thailand who just started art, Currently study at king mongkut's institute of technology ladkrabang.
+                    I'm an Information technology student spacialized in Multimedia and Art. Also I'm interested in Femboy as you can see in the picture
+                </p>
+            </div>
+        </div>
+    </section>
+<section id="showcase" class="py-20 bg-base/30">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <h2 class="text-4xl font-black text-parchment tracking-tight">Art & Renders</h2>
+                <p class="text-tan font-mono text-sm mt-2 uppercase tracking-widest">Blender • Pixel art • Procedural Textures</p>
+            </div>
+            <div class="h-1 flex-grow mx-8 bg-accent/20 mb-2 hidden md:block"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="md:col-span-2 group relative h-96 overflow-hidden rounded-2xl bg-base border border-accent/20 cursor-pointer">
+                <img src="./src/Little_Goody_Two_Shoes.webp" class="absolute inset-0 w-full h-full object-fit transition-transform duration-700 group-hover:scale-110" alt="Blender Environment" />
+                <div class="absolute inset-0 bg-gradient-to-t from-parchment/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    
+                    <h3 class="text-2xl font-bold text-base">Little Goody Two Shoes Logo</h3>
+                    <p class="text-tan text-sm">Title Art for the game</p>
+                </div>
+            </div>
+
+            <div class="group relative h-96 overflow-hidden rounded-2xl bg-base border border-accent/20">
+                <img src="./src/image.webp" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-parchment/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-3">
+                    
+                    <h4 class="text-lg font-bold text-base">Stylized 3d Sword</h4>
+                    <p class="text-tan text-xs uppercase">Painted by hand</p>
+                </div>
+            </div>
+
+            <div class="group relative h-80 overflow-hidden rounded-2xl bg-base border border-accent/20">
+                <img src="./src/heart_1_1.png" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+
+            </div>
+
+            <div class="md:col-span-2 group relative h-80 overflow-hidden rounded-2xl bg-base border border-accent/20">
+                <img src="./src/image.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-accent/10 mix-blend-multiply"></div>
+                <div class="absolute top-6 left-6">
+                    <span class="bg-base/80 backdrop-blur-md text-parchment text-[10px] font-bold px-3 py-1 rounded-full border border-accent/30">Background Art</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="py-32 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-tan">Contact</h2>
+        
+        <div class="flex justify-center gap-6">
+            <a href="https://github.com/KanonratRashomon" class="p-4 bg-base rounded-full border border-accent/40 hover:border-tan hover:text-tan transition-all">GitHub</a>
+            <a href="https://www.facebook.com/share/1ahaPqBWKj/?mibextid=wwXIfr" class="p-4 bg-base rounded-full border border-accent/40 hover:border-tan hover:text-tan transition-all">Facebook</a>
+            <a href="https://www.instagram.com/min.kbmn?igsh=YWR0ZXdqdnVmcjFs&utm_source=qr" class="p-4 bg-base rounded-full border border-accent/40 hover:border-tan hover:text-tan transition-all">Instagram</a>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-parchment/30 border-t border-accent/10">
+        &copy; 2026 kberkkhu. Built with Tailwind CSS.
+    </footer>
+
+</body>
+</html>

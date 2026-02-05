@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #E5DFD3;      /* Light */
+  --color-parchment: #B77B4A; /* Dark */
+  --color-accent: #8B5339;    /* Copper */
+  --color-tan: #B77B4A;       /* Tan */
+}

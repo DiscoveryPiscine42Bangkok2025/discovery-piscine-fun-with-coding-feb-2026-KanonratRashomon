@@ -1,0 +1,56 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.parallax-1 {
+    background-image: url(https://i.pinimg.com/originals/f7/77/8d/f7778d73d1dcb805a3125dce2ab86db5.gif);
+    background-blend-mode: overlay;
+}
+
+
+.parallax-2 {
+    background-image: url(https://media.tenor.com/x8v1oNUOmg4AAAAM/rickroll-roll.gif);
+    background-blend-mode: overlay;
+}
+
+
+.content-block {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+

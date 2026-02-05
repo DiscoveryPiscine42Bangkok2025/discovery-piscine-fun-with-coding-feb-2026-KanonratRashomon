@@ -1,0 +1,55 @@
+body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+            text-align: center;
+            width: 300px;
+        }
+
+ 
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+
+        .social-icon {
+            width: 30px;
+            margin: 5px;
+        }
+
+
+        .btn-contact {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: none;
+        }
+        td {
+            text-align: center;
+            padding: 5px;
+            border: none; 
+        }

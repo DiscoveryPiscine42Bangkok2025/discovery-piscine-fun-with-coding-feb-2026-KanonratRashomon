@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar {
+    background-color: #ddd;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+}
+
+a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none; 
+    color: black;
+}
+
+a:hover {
+    background-color: #bbb;
+}
+
+.dropdown {
+    display: none;
+    position: absolute; 
+    background-color: #fff;
+    border: 1px solid #000; 
+    width: 150px;
+}
+
+.menu-item:hover .dropdown {
+    display: block;
+}

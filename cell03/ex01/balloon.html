@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="balloon"></div>
+
+     <script>
+        const balloon = document.getElementById('balloon');
+        let size = 200
+        
+        const colors = ['red', 'green', 'blue'];
+        let colorsIndex = 0;
+
+        function updateBalloonStyle() {
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+            balloon.style.backgroundColor = colors[colorsIndex];
+
+        }
+
+        balloon.addEventListener('click', function(){
+            size += 10
+
+            if (size > 420) {
+                size = 200;
+                colorsIndex = 0;
+            } else {
+                colorsIndex++;
+                if (colorsIndex >= colors.length) {
+                    colorsIndex = 0;
+                }
+            }
+            updateBalloonStyle();
+        });
+
+        balloon.addEventListener('mouseover', function(){
+            if (size > 200){
+                size -= 5;
+                colorsIndex--;
+                if (colorsIndex < 0) {
+                    colorsIndex = 2;
+                }
+                updateBalloonStyle();
+
+            }
+        });
+
+     </script>
+</body>
+
+</html>

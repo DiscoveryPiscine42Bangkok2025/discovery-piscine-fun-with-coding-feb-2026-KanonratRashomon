@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cards - Custom Theme</title>
+    <link rel="stylesheet" href="./src/output_1.css">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                base: '#E5DFD3',      // Dark Background
+                parchment: '#B77B4A', // Light Text
+                accent: '#8B5339',    // Copper Border/Detail
+                tan: '#B77B4A',       // Lighter Accent
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-base min-h-screen flex items-center justify-center p-6">
+
+    <div class="flex flex-wrap justify-center gap-12 max-w-5xl">
+        
+        <a href="./mark.html" class="group relative block w-80 h-[420px] bg-white rounded-2xl border border-accent/30 transition-all hover:border-tan hover:shadow-[0_0_25px_-5px_rgba(183,123,74,0.4)] pt-16">
+            <!-- backBoard -->
+            <div class="absolute top-0 left-0 right-0 h-32 bg-accent/20 overflow-hidden rounded-t-2xl border-b border-accent/20">
+                <img src="./src/GameDevStory.jpg" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <!-- Image Profile -->
+            <div class="relative z-30 flex justify-center">
+                <div class="w-24 h-24 rounded-full border-4 border-base overflow-hidden shadow-2xl bg-[#3d3131]">
+                    <img src="./src/1655701537480.jpg" alt="Unity Dev" class="w-full h-full object-cover" />
+                </div>
+            </div>
+            <!--Flavour text-->
+            <div class="p-6 text-center">
+                <h2 class="text-2xl font-bold text-parchment">Unity Dev</h2>
+                <p class="text-tan text-xs font-mono mt-1 tracking-widest uppercase">WebGL • FishNet • Blender</p>
+                
+                <p class="min-h-10 text-parchment/70 text-sm mt-4 leading-relaxed">
+                    Building optimized 3D experiences with custom shaders and multiplayer systems.
+                </p>
+                
+                <div class="mt-8 py-2.5 px-4 border border-accent text-parchment text-sm font-bold rounded-lg group-hover:bg-accent transition-all duration-300">
+                    View Portfolio
+                </div>
+            </div>
+        </a>
+
+        <a href="./mean.html" class="group relative block w-80 h-[420px] bg-white rounded-2xl border border-accent/30 transition-all hover:border-tan hover:shadow-[0_0_25px_-5px_rgba(183,123,74,0.4)] pt-16">
+            
+            <div class="absolute top-0 left-0 right-0 h-32 bg-accent/20 overflow-hidden rounded-t-2xl border-b border-accent/20">
+                <img src="./src/30da96b2cb680defdf566c88b8a0f49c.jpg" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" />
+            </div>
+
+            <div class="relative z-30 flex justify-center">
+                <div class="w-24 h-24 rounded-full border-4 border-base overflow-hidden shadow-2xl bg-[#3d3131]">
+                    <img src="./src/IMG_5402.jpg" alt="Web Dev" class="w-full h-full object-cover" />
+                </div>
+            </div>
+            <!--Flavour text-->
+            <div class="p-6 text-center">
+                <h2 class="text-2xl font-bold text-parchment">Junior Artist</h2>
+                <p class="text-tan text-xs font-mono mt-1 tracking-widest uppercase">Pixel Art • Stylized</p>
+                
+                <p class="min-h-10 text-parchment/70 text-sm mt-4 leading-relaxed">
+                    An artist with passion
+
+                </p>
+                
+                <div class="mt-8 py-2.5 px-4 border border-accent text-parchment text-sm font-bold rounded-lg group-hover:bg-accent transition-all duration-300">
+                    View Portfolio
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>

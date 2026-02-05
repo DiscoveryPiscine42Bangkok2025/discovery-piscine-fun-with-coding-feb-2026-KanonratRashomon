@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="./src/output_2.css">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                base: '#501017',
+                parchment: '#D9F9E2', 
+                accent: '#104F1E',
+                tan: '#CF9198',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-[#CF9198] text-parchment">
+    <!-- nav-bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-base/95 backdrop-blur-md border-b border-accent/20">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl tracking-tighter text-tan">PORTFOLIO</span>
+
+            <div class="hidden text-parchment md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#about" class="hover:text-tan transition-colors">About</a>
+                <a href="#showcase" class="hover:text-tan transition-colors">Showcase</a>
+                <a href="#contact" class="hover:text-tan transition-colors">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-parchment focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-base border-b border-accent/20 flex flex-col items-center py-6 space-y-4 text-sm font-medium uppercase tracking-widest">
+            <a href="#about" class="mobile-link hover:text-tan">About</a>
+            <a href="#showcase" class="mobile-link hover:text-tan">Showcase</a>
+            <a href="#contact" class="mobile-link hover:text-tan">Contact</a>
+        </div>
+    </nav>
+    <!-- Phone Nav Bar script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        // Toggle Menu
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+    <section id="about" class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div>
+                <h1 class="text-3xl font-bold">Hola!, My name is Kanokpol Poykham</h1>
+                <h1 class="text-2xl font-bold mb-4">Or you can call me Mark!</h1>
+                <p class="text-lg text-parchment/80 leading-relaxed">
+                    I am a developer focused on blending interactive 3D experiences with modern web technologies. 
+                    With a background in **Unity development** and **3D modeling**, I enjoy solving complex 
+                    optimization challenges in WebGL. When I'm not coding, I'm usually exploring 3D material 
+                    design in Blender or experimenting with new JavaScript frameworks.
+                </p>
+            </div>
+            <div class="w-64 h-64 overflow-hidden border-2 border-accent shrink-0 shadow-2xl rounded-full">
+                <img src="./src/20240118_184611.jpg" alt="Kanokpol Poykham" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="py-20 bg-base/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center border-b border-accent/20 pb-4 inline-block">Qualifications & Projects</h2>
+            <div class="flex flex-wrap justify-center gap-8 mt-8">
+                <!-- Unity card -->
+                <div class="group relative w-80 flex flex-col bg-base border border-accent/30 transition-all hover:border-tan hover:shadow-[0_0_20px_rgba(183,123,74,0.2)] pt-16 rounded-2xl overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-32 bg-accent/20 overflow-hidden">
+                            <img src="./src/Meta.png" class="w-full h-full bg-accent/10 flex items-center justify-center text-tan text-[10px] tracking-widest uppercase">
+                        </div>
+                        <div class="relative z-30 flex justify-center">
+                            <div class="w-24 h-24 rounded-full border-4 border-base overflow-hidden bg-accent/40 flex items-center justify-center text-2xl font-bold text-parchment shadow-xl">U</div>
+                        </div>
+                        <div class="p-6 text-center flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-parchment">Unity Dev</h3>
+                            <p class="text-tan text-xs font-mono uppercase tracking-widest mt-1">C# • WebGL • FishNet</p>
+                            
+                            <p class="text-parchment/60 text-sm mt-4 leading-relaxed">
+                                Specializing in multiplayer games and asset optimization for the web. I focus on creating high-performance WebGL builds that run smoothly on all devices. Currently Working with Pickled Serpent Studio
+                            </p>
+                            <!-- Tag box -->
+                            <div class="mt-4 flex flex-wrap justify-center gap-2">
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Optimization</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Shaders</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blender Card -->
+                    <div class="group relative w-80 flex flex-col bg-base border border-accent/30 transition-all hover:border-tan hover:shadow-[0_0_20px_rgba(183,123,74,0.2)] pt-16 rounded-2xl overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-32 bg-accent/20 overflow-hidden">
+                            <img src="./src/Screenshot 2026-02-05 010258.png" class="object-fit w-full h-full bg-accent/10 flex items-center justify-center text-tan text-[10px] tracking-widest uppercase">
+                        </div>
+                        <div class="relative z-30 flex justify-center">
+                            <div class="w-24 h-24 rounded-full border-4 border-base overflow-hidden bg-accent/40 flex items-center justify-center text-2xl font-bold text-parchment shadow-xl">A</div>
+                        </div>
+                        <div class="p-6 text-center flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-parchment">3D Artist</h3>
+                            <p class="text-tan text-xs font-mono uppercase tracking-widest mt-1">Blender • Substance</p>
+                            <p class="text-parchment/60 text-sm mt-4 leading-relaxed">
+                                Specializing in UV unwrapping and optimizing assets for game engines. I create procedural materials and high-quality Spanish Bond patterns for architectural visualization.
+                            </p>
+                            <div class="mt-4 flex flex-wrap justify-center gap-2">
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Modeling</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Texturing</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Low-Poly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Web Dev Card -->
+                    <div class="group relative w-80 flex flex-col bg-base border border-accent/30 transition-all hover:border-tan hover:shadow-[0_0_20px_rgba(183,123,74,0.2)] pt-16 rounded-2xl overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-32 bg-accent/20 overflow-hidden">
+                            <img src="./src/Web.png" class="object-fit w-full h-full bg-accent/10 flex items-center justify-center text-tan text-[10px] tracking-widest uppercase">
+                        </div>
+                        <div class="relative z-30 flex justify-center">
+                            <div class="w-24 h-24 rounded-full border-4 border-base overflow-hidden bg-accent/40 flex items-center justify-center text-2xl font-bold text-parchment shadow-xl">W</div>
+                        </div>
+                        <div class="p-6 text-center flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-parchment">Website Development</h3>
+                            <p class="text-tan text-xs font-mono uppercase tracking-widest mt-1">Django • Node.js • Tailwind</p>
+                            <p class="text-parchment/60 text-sm mt-4 leading-relaxed">
+                                Backend development and full-stack web applications with cloud deployment knowledge. I build secure, scalable APIs and modern user interfaces.
+                            </p>
+                            <div class="mt-4 flex flex-wrap justify-center gap-2">
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Python</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">PostgreSQL</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">JavaScript</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative w-80 flex flex-col bg-base border border-accent/30 transition-all hover:border-tan hover:shadow-[0_0_20px_rgba(183,123,74,0.2)] pt-16 rounded-2xl overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-32 bg-accent/20 overflow-hidden">
+                            <img src="./src/Metaverse.png" class="object-fit w-full h-full bg-accent/10 flex items-center justify-center text-tan text-[10px] tracking-widest uppercase">
+                        </div>
+                        <div class="relative z-30 flex justify-center">
+                            <div class="w-24 h-24 rounded-full border-4 border-base overflow-hidden bg-accent/40 flex items-center justify-center text-2xl font-bold text-parchment shadow-xl">M</div>
+                        </div>
+                        <div class="p-6 text-center flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-parchment">Metaverse Project</h3>
+                            <p class="text-tan text-xs font-mono uppercase tracking-widest mt-1">Unity • WebGL • C#</p>
+                            <p class="text-parchment/60 text-sm mt-4 leading-relaxed">
+                                Senior Project for Metaverse Development. Creating a virtual interactive environment that simulates real-world Environment of Maha Chakri Sirindhorn 
+Learning Center and Krom Luang Naradhiwas Rajanagarinda Building at King Mongkut's Institute of Technology Ladkrabang.
+                            </p>
+                            <div class="mt-4 flex flex-wrap justify-center gap-2">
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Interactive</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Innovative</span>
+                                <span class="text-[10px] px-2 py-1 bg-accent/10 border border-accent/20 rounded text-parchment/50">Digital twin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Contact Info</h2>
+        <p class="text-parchment/60 mb-10 max-w-md mx-auto">Always open to discussing game development, web collaborations, or 3D projects.</p>
+        
+        <div class="flex justify-center gap-6">
+            <a href="https://github.com/Kanokpol203" class="p-4 bg-base rounded-full border border-accent/40 hover:border-tan hover:text-tan transition-all">GitHub</a>
+            <a href="https://www.facebook.com/markky.zaaa" class="p-4 bg-base rounded-full border border-accent/40 hover:border-tan hover:text-tan transition-all">Facebook</a>
+            <a href="https://steamcommunity.com/id/ARIVENDECI/" class="p-4 bg-base rounded-full border border-accent/40 hover:border-tan hover:text-tan transition-all">Steam</a>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-parchment/30 border-t border-accent/10">
+        &copy; 2026 kPoykham. Built with Tailwind CSS.
+    </footer>
+
+</body>
+</html>
