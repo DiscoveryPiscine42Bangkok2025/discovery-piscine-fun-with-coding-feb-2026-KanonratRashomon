@@ -1,0 +1,18 @@
+body {
+            margin: 0;
+            height: 100vh; /* ให้ความสูงเต็มจอ */
+            display: flex;
+            justify-content: center; /* จัดปุ่มกึ่งกลางแนวนอน */
+            align-items: center;     /* จัดปุ่มกึ่งกลางแนวตั้ง */
+            font-family: sans-serif;
+            transition: background-color 0.3s; /* ให้สีเปลี่ยนแบบนุ่มนวล (Optional) */
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
